@@ -1,0 +1,11 @@
+#bootstrap的文件优先级高于application
+#uri是git的地址，name相当于在git中配置中间的application-name
+#profile
+#比如在git仓库中有一个文件是 aaa-dev，那么此处name=aaa，profile=dev
+spring:
+  cloud:
+    config:
+      label: master
+      profile: dev
+      uri: http://localhost:8888/
+      name: config-client
